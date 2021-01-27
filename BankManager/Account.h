@@ -6,9 +6,21 @@
 //#define ACCOUNT_API _declspec(dllimport)
 //#endif // ACCOUNT_EXPORTS
 
-class ACCOUNT_API Account
-{
-public:
-	int Add(int a, int b);
-};
+#include "AccountType.h"
+#include "CurrencyType.h"
 
+namespace Account
+{
+	class ACCOUNT_API Account
+	{
+		private: 
+			AccountType accType;
+			CurrencyType curType;
+			bool blocked;
+			bool overdraftEnabled;
+			float maxOverdraft;
+			float amount;
+		public:
+			int Add(int a, int b);
+	};
+}

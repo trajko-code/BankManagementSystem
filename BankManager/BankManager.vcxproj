@@ -152,21 +152,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountType.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Credit.h" />
+    <ClInclude Include="CurrencyType.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="CreditType.h" />
+    <ClInclude Include="Guarantor.h" />
+    <ClInclude Include="BankPolicy.h" />
     <ClInclude Include="IDatabase.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Student.h" />
+    <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Credit.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Guarantor.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Transaction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include "../BankManager/Account.h"
-#include "../BankManager/Student.h"
+//#include "../BankManager/Student.h"
 #include "../BankManager/IDatabase.h"
 
 class DatabaseConnectorMock : public IDatabase
@@ -18,11 +18,11 @@ TEST(Student, TestConnection) {
     ::testing::NiceMock<DatabaseConnectorMock> databaseConnection;
     EXPECT_CALL(databaseConnection, Connect())
         .Times(::testing::AtLeast(1));
-    Student student(&databaseConnection);
+    //Student student(&databaseConnection);
 }
 
 TEST(TestCaseName, TestName) {
-    Account acc;
+    Account::Account acc;
 
     EXPECT_EQ(5, acc.Add(2, 3));
 }

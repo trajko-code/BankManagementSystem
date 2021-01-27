@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Client">
+      <UniqueIdentifier>{f83da99a-329f-4974-bc7d-36cec8e2b8f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Account">
+      <UniqueIdentifier>{e2b2e928-c7dd-48d2-bfd4-ed51ce0fbfd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Transaction">
+      <UniqueIdentifier>{59bd0399-b514-4362-a5e8-0428d66bfdcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Database">
+      <UniqueIdentifier>{45ab2ff1-8ded-4d9a-bb81-f7c83a53fed5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Credit">
+      <UniqueIdentifier>{dfcab9a4-3bc7-4dbf-83dd-c17675c5bcaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Policy">
+      <UniqueIdentifier>{8abbddca-66d6-4a83-bdcd-2219e58509a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -21,14 +39,35 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Student.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IDatabase.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Account.h">
+      <Filter>Header Files\Account</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Credit.h">
+      <Filter>Header Files\Credit</Filter>
+    </ClInclude>
+    <ClInclude Include="Transaction.h">
+      <Filter>Header Files\Transaction</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountType.h">
+      <Filter>Header Files\Account</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrencyType.h">
+      <Filter>Header Files\Account</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditType.h">
+      <Filter>Header Files\Credit</Filter>
+    </ClInclude>
+    <ClInclude Include="Guarantor.h">
+      <Filter>Header Files\Credit</Filter>
+    </ClInclude>
+    <ClInclude Include="BankPolicy.h">
+      <Filter>Header Files\Policy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,7 +80,16 @@
     <ClCompile Include="Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Credit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Transaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Guarantor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

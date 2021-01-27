@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ClientTests">
+      <UniqueIdentifier>{172db1de-2ad3-4582-b7e8-f91e29ba3a5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AccountTests">
+      <UniqueIdentifier>{7e79dd6c-d7a2-4e3f-89d4-f0a619ec69d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CreditTests">
+      <UniqueIdentifier>{ed4b5829-960b-4dcd-a7ae-2b2f59416a7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TransactionTests">
+      <UniqueIdentifier>{d74335d2-6e44-4be4-9092-8122af316dc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
