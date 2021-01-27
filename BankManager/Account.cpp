@@ -2,7 +2,13 @@
 #include "Account.h"
 
 
-int Account::Account::Add(int a, int b)
+Account::Account::Account(AccountType aType, CurrencyType cType, bool Blocked, bool OverdraftEnabled,
+    float MaxOverdraft, float Amount)
+    : accType(aType), curType(cType), blocked(Blocked), overdraftEnabled(OverdraftEnabled),
+      maxOverdraft(MaxOverdraft), amount(Amount)
 {
-    return a + b;
+}
+
+Account::Account::~Account()
+{
 }
