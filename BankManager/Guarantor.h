@@ -14,6 +14,10 @@ namespace Credit
 			Guarantor(std::string Name, std::string Address,
 				std::string PhoneNumber, std::string MonthlyIncome);
 			~Guarantor();
+			Guarantor(const Guarantor&);
+			Guarantor& operator=(const Guarantor&);
+			Guarantor(Guarantor&&) = delete;
+			Guarantor& operator=(const Guarantor&&) = delete;
 
 			std::string GetName() const { return this->name; }
 			std::string GetAddress() const { return this->address; }

@@ -20,7 +20,7 @@ namespace Credit
 			struct std::tm endDate;
 			int duration;
 			float monthlyPayment;
-			std::vector<std::unique_ptr<Guarantor>> guarantors;
+			std::vector<Guarantor> guarantors;
 
 		public:
 			/**
@@ -29,15 +29,15 @@ namespace Credit
 			 */
 			Credit(float Amount, Account::CurrencyType CType, float InterestRate,
 				struct std::tm BeginDate, struct std::tm EndDate, int Duration,
-				std::unique_ptr<std::vector<std::unique_ptr<Guarantor>>> Guarantors);
+				std::vector<Guarantor> Guarantors);
 			
 			/**
 			* @brief Default destructor
 			*
 			*/
 			~Credit();
-			Credit(const Credit&) = delete;
-			Credit& operator=(const Credit&) = delete;
+			Credit(const Credit&) = default;
+			Credit& operator=(const Credit&) = default;
 			Credit(Credit&&) = delete;
 			Credit& operator=(const Credit&&) = delete;
 
@@ -93,9 +93,9 @@ namespace Credit
 			/**
 			* @brief Get credit guarantors
 			*
-			* @return std::vector<std::unique_ptr<Guarantor>> guarantors
+			* @return std::vector<Guarantor> guarantors
 			*/
-			std::vector<std::unique_ptr<Guarantor>> GetGuarantors(Account::CurrencyType cType) const { return this->guarantors; };
+			std::vector<Guarantor> GetGuarantors() const { return this->guarantors; };
 
 	};
 }

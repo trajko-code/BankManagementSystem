@@ -16,5 +16,5 @@ Client::Client::~Client()
 
 float Client::Client::GetTotalAmount(Account::CurrencyType cType) const
 {
-	return;
+	return 0.0f;
 }
