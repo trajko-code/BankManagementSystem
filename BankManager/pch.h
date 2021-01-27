@@ -11,5 +11,6 @@
 #include "framework.h"
 #include <string>
 #include <vector>
+#include <memory>
 
 #endif //PCH_H
