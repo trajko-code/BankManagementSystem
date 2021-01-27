@@ -2,7 +2,7 @@
 
 namespace Account
 {
-	enum CurrencyType 
+	enum class CurrencyType 
 	{
 		Rsd,
 		Eur,

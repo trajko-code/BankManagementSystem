@@ -2,7 +2,7 @@
 
 namespace Account 
 {
-	enum AccountType
+	enum class AccountType
 	{
 		DomesticChecking,
 		ForeignChecking,
