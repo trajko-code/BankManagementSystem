@@ -6,8 +6,13 @@
 //#define ACCOUNT_API _declspec(dllimport)
 //#endif // ACCOUNT_EXPORTS
 
+#include "pch.h"
 #include "AccountType.h"
 #include "CurrencyType.h"
+#include "AccountBlocked.h"
+#include "OverdraftDisabled.h"
+#include "OverdraftedMaxLimit.h"
+#include "MaxOverdraftNotSetted.h"
 
 namespace Account
 {
@@ -27,7 +32,7 @@ namespace Account
 			 * @brief Default contstructor
 			 *
 			 */
-			Account(AccountType aType, CurrencyType cType);
+			Account(std::string accountId, AccountType aType, CurrencyType cType);
 
 			/**
 			* @brief Default destructor
@@ -39,8 +44,27 @@ namespace Account
 			Account(Account&&) = delete;
 			Account& operator=(const Account&&) = delete;
 
-			bool Deposit(float depositAmount);
-			bool Withdraw(float withdrawAmount);
+			/**
+			* @brief This is the function used to deposit money to the balance
+			* 
+			* @param depositAmount Amount of monet to deposit
+			* 
+			* @exception std::invalid_argument if depositAmount is negative
+			*/
+			void Deposit(float depositAmount);
+			/**
+			 * @brief This is the function used to withdraw money from the balance.
+			 *	
+			 * @param withdrawAmount Amount of money to withdraw
+			 * 
+			 * @exception Account::accExceptions::AccountBlocked If account is blocked
+			 * @exception Account::accExceptions::OverdraftDisabled If there is no enough
+		     *        money to withdraw and overdraft is disabled
+			 * @exception Account::accExceptions::MaxOverdraftNotSetted If there is no enough
+		     *        money to withdraw and max overdraft limit is not setted
+			 * @exception Account::accExceptions::OverdrafedMaxLimit If max overdraft limit is overdrafted
+			 */
+			void Withdraw(float withdrawAmount);
 
 			/**
 			* @brief Check account blocked
@@ -55,6 +79,12 @@ namespace Account
 			*/
 			bool IsOverdraftEnabled() const { return this->overdraftEnabled; }
 
+			/**
+			* @brief Get account id
+			*
+			* @return string accountId
+			*/
+			std::string GetAccountId() const { return this->accountId; }
 			/**
 			* @brief Get account type
 			*
@@ -106,19 +136,13 @@ namespace Account
 			 *
 			 * @param aType type of account to be setted
 			 */
-			void SetAccountType(AccountType aType) { this->accType = aType; }
-			/**
-			 * @brief Set currency type
-			 *
-			 * @param cType type of account to be setted
-			 */
-			void SetCurrencyType(CurrencyType cType) { this->curType = cType; }
+			void SetAccountType(AccountType aType);
 			/**
 			 * @brief Set maximum allowed overdraft
 			 *
 			 * @param MaxOverdraft amount of maximum allowed overdraft
 			 */
-			void SetMaxOverdraft(float MaxOverdraft) { this->maxOverdraft = MaxOverdraft; }
+			void SetMaxOverdraft(float MaxOverdraft);
 
 	};
 }

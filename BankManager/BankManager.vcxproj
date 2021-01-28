@@ -159,12 +159,16 @@
     <ClInclude Include="Credit.h" />
     <ClInclude Include="CurrencyType.h" />
     <ClInclude Include="EmptyInitialValues.h" />
+    <ClInclude Include="CurrencyConversion.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="CreditType.h" />
     <ClInclude Include="Guarantor.h" />
     <ClInclude Include="BankPolicy.h" />
+    <ClInclude Include="MaxOverdraftNotSetted.h" />
     <ClInclude Include="IDatabase.h" />
     <ClInclude Include="InvalidValue.h" />
+    <ClInclude Include="OverdraftDisabled.h" />
+    <ClInclude Include="OverdraftedMaxLimit.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Transaction.h" />
   </ItemGroup>
