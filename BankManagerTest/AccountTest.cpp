@@ -146,11 +146,4 @@ namespace AccountTesting
         acc_->SetMaxOverdraft(negativeMaxLimit);
         EXPECT_EQ(negativeMaxLimit, acc_->GetMaxOverdraft());
     }
-
-    TEST_F(AccountTest, ChangeCurrencyType)
-    {
-        acc_->Deposit(5000.0f);
-        acc_->ChangeToSaving(Account::CurrencyType::Eur);
-        EXPECT_FLOAT_EQ(acc_->GetBalance(), 5000.0 / 117.60);
-    }
 }
