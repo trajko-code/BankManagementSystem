@@ -12,5 +12,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <exception>
+#include <stdexcept>
 
 #endif //PCH_H

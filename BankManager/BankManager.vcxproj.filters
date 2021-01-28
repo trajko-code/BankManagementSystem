@@ -75,6 +75,18 @@
     <ClInclude Include="AccountBlocked.h">
       <Filter>Header Files\Account\AccountExceptions</Filter>
     </ClInclude>
+    <ClInclude Include="OverdraftDisabled.h">
+      <Filter>Header Files\Account\AccountExceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="OverdraftedMaxLimit.h">
+      <Filter>Header Files\Account\AccountExceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxOverdraftNotSetted.h">
+      <Filter>Header Files\Account\AccountExceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrencyConversion.h">
+      <Filter>Header Files\Account</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
