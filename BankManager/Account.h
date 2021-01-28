@@ -13,31 +13,34 @@ namespace Account
 {
 	class ACCOUNT_API Account
 	{
-		private: 
+		private:
+			std::string accountId;
 			AccountType accType;
 			CurrencyType curType;
 			bool blocked;
 			bool overdraftEnabled;
 			float maxOverdraft;
-			float amount;
+			float balance;
 
 		public:
 			/**
 			 * @brief Default contstructor
 			 *
 			 */
-			Account(AccountType aType, CurrencyType cType, bool Blocked, bool OverdraftEnabled, 
-				float MaxOverdraft, float Amount);
+			Account(AccountType aType, CurrencyType cType);
 
 			/**
 			* @brief Default destructor
 			*
 			*/
 			~Account();
-			Account(const Account&) = delete;
-			Account& operator=(const Account&) = delete;
+			Account(const Account&) = default;
+			Account& operator=(const Account&) = default;
 			Account(Account&&) = delete;
 			Account& operator=(const Account&&) = delete;
+
+			bool Deposit(float depositAmount);
+			bool Withdraw(float withdrawAmount);
 
 			/**
 			* @brief Check account blocked
@@ -73,9 +76,9 @@ namespace Account
 			/**
 			* @brief Get the total amount of money in the account
 			*
-			* @return float amount of money
+			* @return float balance
 			*/
-			float GetAmount() const { return this->amount; }
+			float GetBalance() const { return this->balance; }
 
 			/**
 			 * @brief Block account

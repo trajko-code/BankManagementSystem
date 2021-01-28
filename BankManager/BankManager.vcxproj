@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountBlocked.h" />
     <ClInclude Include="AccountType.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Credit.h" />

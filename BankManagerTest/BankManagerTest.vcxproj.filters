@@ -3,6 +3,9 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="AccountTest.cpp">
+      <Filter>AccountTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Policy">
       <UniqueIdentifier>{8abbddca-66d6-4a83-bdcd-2219e58509a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Account\AccountExceptions">
+      <UniqueIdentifier>{7c855683-17a9-415b-b5dd-d6e79c4ab4ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -68,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="BankPolicy.h">
       <Filter>Header Files\Policy</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountBlocked.h">
+      <Filter>Header Files\Account\AccountExceptions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

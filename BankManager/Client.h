@@ -5,12 +5,13 @@
 #include "pch.h"
 #include "Account.h"
 #include "Credit.h"
+#include "IDatabase.h"
 
 namespace Client
 {
 	class CLIENT_API Client
 	{
-		private:
+		protected:	
 			std::string clientId;
 			std::string name;
 			std::string address;
@@ -23,13 +24,17 @@ namespace Client
 			std::vector<Account::Account> client_accounts;
 			std::vector<Credit::Credit> client_credits;
 
+		private:
+			bool changedData;
+			IDatabase* databaseConnector;
+
 		public:
 			/**
 			 * @brief Default contstructor
 			 *
 			 */
-			Client(std::string Name, std::string Address, std::string PhoneNumber,
-					std::string DateOfBirth, std::string PersonIdentificationNumber, 
+			Client(IDatabase* DatabaseConector, std::string Name, std::string Address, 
+					std::string PhoneNumber, std::string DateOfBirth, std::string PersonIdentificationNumber, 
 					std::string CardNumber, std::string PinCode);
 			
 			/**
