@@ -34,6 +34,9 @@
     <Filter Include="Header Files\Account\AccountExceptions">
       <UniqueIdentifier>{7c855683-17a9-415b-b5dd-d6e79c4ab4ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Client\ClientException">
+      <UniqueIdentifier>{46855795-f343-49f3-9b3b-ddb572f5c861}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -74,6 +77,15 @@
     </ClInclude>
     <ClInclude Include="AccountBlocked.h">
       <Filter>Header Files\Account\AccountExceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDataConstants.h">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyInitialValues.h">
+      <Filter>Header Files\Client\ClientException</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidValue.h">
+      <Filter>Header Files\Client\ClientException</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

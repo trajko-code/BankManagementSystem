@@ -155,13 +155,16 @@
     <ClInclude Include="AccountBlocked.h" />
     <ClInclude Include="AccountType.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="ClientDataConstants.h" />
     <ClInclude Include="Credit.h" />
     <ClInclude Include="CurrencyType.h" />
+    <ClInclude Include="EmptyInitialValues.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="CreditType.h" />
     <ClInclude Include="Guarantor.h" />
     <ClInclude Include="BankPolicy.h" />
     <ClInclude Include="IDatabase.h" />
+    <ClInclude Include="InvalidValue.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Transaction.h" />
   </ItemGroup>

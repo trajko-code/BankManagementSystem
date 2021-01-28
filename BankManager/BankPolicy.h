@@ -1,4 +1,4 @@
 #pragma once
 
-#define Commission_fee 0.01
-#define Daily_limit_RSD 50000
+#define COMMISSION_FEE  0.01
+#define DAILY_LIMIT_RSD 50000

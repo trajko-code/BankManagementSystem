@@ -1,8 +1,10 @@
 #pragma once
 
+#define GUARANTOR_API _declspec(dllexport)
+
 namespace Credit
 {
-	class Guarantor
+	class GUARANTOR_API Guarantor
 	{
 		private:
 			std::string name;
@@ -14,8 +16,8 @@ namespace Credit
 			Guarantor(std::string Name, std::string Address,
 				std::string PhoneNumber, std::string MonthlyIncome);
 			~Guarantor();
-			Guarantor(const Guarantor&);
-			Guarantor& operator=(const Guarantor&);
+			Guarantor(const Guarantor&) = default;
+			Guarantor& operator=(const Guarantor&) = default;
 			Guarantor(Guarantor&&) = delete;
 			Guarantor& operator=(const Guarantor&&) = delete;
 

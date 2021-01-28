@@ -6,6 +6,9 @@
     <ClCompile Include="AccountTest.cpp">
       <Filter>AccountTests</Filter>
     </ClCompile>
+    <ClCompile Include="ClientTest.cpp">
+      <Filter>ClientTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

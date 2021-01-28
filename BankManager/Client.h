@@ -32,6 +32,8 @@ namespace Client
 			/**
 			 * @brief Default contstructor
 			 *
+			 * @exception Client::clExceptions::EmptyInitialValues if any parameter is empty string
+			 * @exception Client::clExceptions::InvalidValue if person identification number, card number and pin code has invalid length.
 			 */
 			Client(IDatabase* DatabaseConector, std::string Name, std::string Address, 
 					std::string PhoneNumber, std::string DateOfBirth, std::string PersonIdentificationNumber, 
@@ -42,8 +44,8 @@ namespace Client
 			*
 			*/
 			~Client();
-			Client(const Client&) = delete;
-			Client& operator=(const Client&) = delete;
+			Client(const Client&) = default;
+			Client& operator=(const Client&) = default;
 			Client(Client&&) = delete;
 			Client& operator=(const Client&&) = delete;
 
@@ -110,7 +112,6 @@ namespace Client
 			* @return vector Credit
 			*/
 			std::vector<Credit::Credit> GetCredits() const { return this->client_credits; }
-
 	};
 }
 
