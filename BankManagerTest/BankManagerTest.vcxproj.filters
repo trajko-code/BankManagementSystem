@@ -9,6 +9,7 @@
     <ClCompile Include="ClientTest.cpp">
       <Filter>ClientTests</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratorTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

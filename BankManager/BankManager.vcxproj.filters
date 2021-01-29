@@ -99,6 +99,15 @@
     <ClInclude Include="CurrencyConversion.h">
       <Filter>Header Files\Account</Filter>
     </ClInclude>
+    <ClInclude Include="UUIDGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidDeleteAccount.h">
+      <Filter>Header Files\Client\ClientException</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountTypeExists.h">
+      <Filter>Header Files\Client\ClientException</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -120,6 +129,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Guarantor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UUIDGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

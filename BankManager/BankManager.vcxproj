@@ -154,6 +154,7 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="AccountBlocked.h" />
     <ClInclude Include="AccountType.h" />
+    <ClInclude Include="AccountTypeExists.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="ClientDataConstants.h" />
     <ClInclude Include="Credit.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="CreditType.h" />
     <ClInclude Include="Guarantor.h" />
     <ClInclude Include="BankPolicy.h" />
+    <ClInclude Include="InvalidDeleteAccount.h" />
     <ClInclude Include="MaxOverdraftNotSetted.h" />
     <ClInclude Include="IDatabase.h" />
     <ClInclude Include="InvalidValue.h" />
@@ -171,6 +173,7 @@
     <ClInclude Include="OverdraftedMaxLimit.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Transaction.h" />
+    <ClInclude Include="UUIDGenerator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
@@ -185,6 +188,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Transaction.cpp" />
+    <ClCompile Include="UUIDGenerator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,7 +11,10 @@
 #include "framework.h"
 #include <string>
 #include <vector>
+#include <list>
+#include <unordered_map>
 #include <memory>
+#include <algorithm>
 #include <exception>
 #include <stdexcept>
 

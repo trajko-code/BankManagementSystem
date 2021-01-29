@@ -14,7 +14,7 @@ namespace Client
 
 			const char* what()
 			{
-				std::string retVal = "Client" + clientId + "has empty initial values.";
+				std::string retVal = "Client " + clientId + " has empty initial values.";
 
 				return retVal.c_str();
 			}

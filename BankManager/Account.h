@@ -32,7 +32,7 @@ namespace Account
 			 * @brief Default contstructor
 			 *
 			 */
-			Account(std::string accountId, AccountType aType, CurrencyType cType);
+			Account(AccountType aType, CurrencyType cType);
 
 			/**
 			* @brief Default destructor
@@ -41,8 +41,8 @@ namespace Account
 			~Account();
 			Account(const Account&) = default;
 			Account& operator=(const Account&) = default;
-			Account(Account&&) = delete;
-			Account& operator=(const Account&&) = delete;
+			//Account(Account&&) = delete;
+			//Account& operator=(const Account&&) = delete;
 
 			/**
 			* @brief This is the function used to deposit money to the balance

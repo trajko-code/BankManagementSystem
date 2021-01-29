@@ -1,10 +1,12 @@
 #include "pch.h"
 #include "Account.h"
+#include "UUIDGenerator.h"
 
-Account::Account::Account(std::string accountId, AccountType aType, CurrencyType cType)
+Account::Account::Account(AccountType aType, CurrencyType cType)
     : accType(aType), curType(cType), blocked(false), overdraftEnabled(false),
       maxOverdraft(0.0f), balance(0.0f)
 {
+    this->accountId = UUIDGenerator::GetAccountUUID();
 }
 
 Account::Account::~Account()

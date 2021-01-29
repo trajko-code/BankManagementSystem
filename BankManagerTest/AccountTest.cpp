@@ -14,7 +14,7 @@ namespace AccountTesting
             void SetUp() override
             {
                 acc_ = std::unique_ptr<Account::Account>(new Account::Account(
-                    "1234", Account::AccountType::DomesticChecking, Account::CurrencyType::Rsd));
+                   Account::AccountType::DomesticChecking, Account::CurrencyType::Rsd));
             }
 
             void TearDown() override

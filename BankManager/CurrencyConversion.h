@@ -1,12 +1,16 @@
 #pragma once
 
+#include "pch.h"
+#include "CurrencyType.h"
+
 namespace Account
 {
-	struct ExchangeRate
+	std::unordered_map<CurrencyType, float> ExchangeRateMap =
 	{
-		float RsdToEur = 117.670;
-		float RsdToUsd = 97.0407;
-		float RsdToGbp = 133.206;
-		float RsdToChf = 109.258;
+		{ CurrencyType::Rsd, 1.0 },
+		{ CurrencyType::Eur, 117.670 },
+		{ CurrencyType::Usd, 97.0407 },
+		{ CurrencyType::Gbp, 133.206 },
+		{ CurrencyType::Chf, 109.258 }
 	};
 }

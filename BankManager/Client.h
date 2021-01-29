@@ -6,6 +6,8 @@
 #include "Account.h"
 #include "Credit.h"
 #include "IDatabase.h"
+#include "AccountType.h"
+#include "CurrencyType.h"
 
 namespace Client
 {
@@ -21,7 +23,7 @@ namespace Client
 			std::string cardNumber;
 			std::string pinCode;
 			float totalAmount; //in domestic currency
-			std::vector<Account::Account> client_accounts;
+			std::shared_ptr<std::vector<std::shared_ptr<Account::Account>>> client_accounts;
 			std::vector<Credit::Credit> client_credits;
 
 		private:
@@ -49,6 +51,42 @@ namespace Client
 			Client(Client&&) = delete;
 			Client& operator=(const Client&&) = delete;
 
+			/**
+			* @brief Delete client account
+			*
+			* @param string account id for deleting
+			*/
+			void DeleteAccount(const std::string accId);
+			/**
+			* @brief Create new account
+			*
+			* @param accType is enum account type
+			* @param curType is enum currency type
+			*/
+			void CreateAccount(const Account::AccountType accType, const Account::CurrencyType curType);
+			/**
+			* @brief Deposit money on selected account
+			*
+			* @param accId is account UUID
+			* @param amount is amount of money to deposit
+			* 
+			* @exception std::invalid_argument if depositAmount is negative
+			*/
+			void DepositOnAccount(const std::string accId, const float amount);
+			/**
+			* @brief Withdraw money from selected account
+			*
+			* @param accId is account UUID
+			* @param amount is amount of money to deposit
+			* 
+			* @exception Account::accExceptions::AccountBlocked If account is blocked
+			* @exception Account::accExceptions::OverdraftDisabled If there is no enough
+		    *        money to withdraw and overdraft is disabled
+			* @exception Account::accExceptions::MaxOverdraftNotSetted If there is no enough
+		    *        money to withdraw and max overdraft limit is not setted
+			* @exception Account::accExceptions::OverdrafedMaxLimit If max overdraft limit is overdrafted
+			*/
+			void WithdrawFromAccount(const std::string accId, const float amount);
 
 			/**
 			* @brief Get client name
@@ -105,13 +143,25 @@ namespace Client
 			*
 			* @return vector Account
 			*/
-			std::vector<Account::Account> GetAccounts() const { return this->client_accounts; }
+			std::shared_ptr<std::vector<std::shared_ptr<Account::Account>>> GetAccounts() const { return this->client_accounts; }
+			/**
+			* @brief Get account with accId
+			*
+			* @return Account
+			*/
+			std::shared_ptr<Account::Account> GetAccount(const std::string accId) const;
 			/**
 			* @brief Get all clients credits
 			*
 			* @return vector Credit
 			*/
 			std::vector<Credit::Credit> GetCredits() const { return this->client_credits; }
+
+			/**
+			* @brief Set all clients accounts
+			*
+			*/
+			void SetClientAccounts(std::shared_ptr<std::vector<std::shared_ptr<Account::Account>>> ClientAccounts);
 	};
 }
 

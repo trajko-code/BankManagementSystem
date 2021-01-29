@@ -16,7 +16,7 @@ namespace Client
 
 			const char* what()
 			{
-				std::string retVal = "Client" + clientId + "has" + this->exceptionInfo;
+				std::string retVal = "Client " + clientId + " has " + this->exceptionInfo;
 
 				return retVal.c_str();
 			}
