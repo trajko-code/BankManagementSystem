@@ -2,16 +2,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="test.cpp" />
     <ClCompile Include="AccountTest.cpp">
       <Filter>AccountTests</Filter>
     </ClCompile>
     <ClCompile Include="ClientTest.cpp">
       <Filter>ClientTests</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratorTest.cpp" />
     <ClCompile Include="ClientManagerTest.cpp">
       <Filter>ClientTests</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorTest.cpp">
+      <Filter>GeneratorTests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,11 +28,14 @@
     <Filter Include="AccountTests">
       <UniqueIdentifier>{7e79dd6c-d7a2-4e3f-89d4-f0a619ec69d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GeneratorTests">
+      <UniqueIdentifier>{9ec825b1-e087-4ac8-ad3f-54a447c01950}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CreditTests">
-      <UniqueIdentifier>{ed4b5829-960b-4dcd-a7ae-2b2f59416a7b}</UniqueIdentifier>
+      <UniqueIdentifier>{ca9b9ef7-287e-452c-b670-a23b1d812440}</UniqueIdentifier>
     </Filter>
     <Filter Include="TransactionTests">
-      <UniqueIdentifier>{d74335d2-6e44-4be4-9092-8122af316dc4}</UniqueIdentifier>
+      <UniqueIdentifier>{fe49c0c4-c8aa-4978-8e34-15ca6806003d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

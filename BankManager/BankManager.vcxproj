@@ -177,7 +177,7 @@
     <ClInclude Include="OverdraftedMaxLimit.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Transaction.h" />
-    <ClInclude Include="UUIDGenerator.h" />
+    <ClInclude Include="IDGenerator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
@@ -193,7 +193,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Transaction.cpp" />
-    <ClCompile Include="UUIDGenerator.cpp" />
+    <ClCompile Include="IDGenerator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

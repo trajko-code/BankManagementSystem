@@ -6,7 +6,7 @@
 #include "InvalidDeleteAccount.h"
 #include "ClientDataConstants.h"
 #include "CurrencyConversion.h"
-#include "UUIDGenerator.h"
+#include "IDGenerator.h"
 
 
 Client::Client::Client(std::string Name, std::string Address, std::string PhoneNumber,
@@ -29,7 +29,7 @@ Client::Client::Client(std::string Name, std::string Address, std::string PhoneN
 	if (PinCode.length() != pinCodeLength)
 		throw clExceptions::InvalidValue(this->clientId, "invalid length of pin code");
 
-	this->clientId = UUIDGenerator::GetClientUUID();
+	this->clientId = IDGenerator::GetClientUUID();
 	this->totalAmount = 0.0f;
 	this->client_accounts = std::make_shared<std::vector<std::shared_ptr<Account::Account>>>();
 }
