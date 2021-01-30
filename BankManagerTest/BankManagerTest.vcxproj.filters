@@ -10,6 +10,9 @@
       <Filter>ClientTests</Filter>
     </ClCompile>
     <ClCompile Include="GeneratorTest.cpp" />
+    <ClCompile Include="ClientManagerTest.cpp">
+      <Filter>ClientTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

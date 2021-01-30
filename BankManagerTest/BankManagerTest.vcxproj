@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="AccountTest.cpp" />
+    <ClCompile Include="ClientManagerTest.cpp" />
     <ClCompile Include="ClientTest.cpp" />
     <ClCompile Include="GeneratorTest.cpp" />
     <ClCompile Include="pch.cpp">

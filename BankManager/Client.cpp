@@ -9,11 +9,11 @@
 #include "UUIDGenerator.h"
 
 
-Client::Client::Client(IDatabase* DatabaseConector, std::string Name, std::string Address, std::string PhoneNumber,
+Client::Client::Client(std::string Name, std::string Address, std::string PhoneNumber,
 	 std::string DateOfBirth, std::string PersonIdentificationNumber, std::string CardNumber, std::string PinCode)
 	: name(Name), address(Address), phoneNumber(PhoneNumber), dateOfBirth(DateOfBirth),
 		personIdentifactionNumber(PersonIdentificationNumber), cardNumber(CardNumber), pinCode(PinCode),
-		changedData(false), databaseConnector(DatabaseConector)
+		changedData(false)
 {
 	if (Name.empty() || Address.empty() || PhoneNumber.empty() || DateOfBirth.empty()
 		|| PersonIdentificationNumber.empty() || CardNumber.empty() || PinCode.empty())

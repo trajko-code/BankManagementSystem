@@ -5,7 +5,6 @@
 #include "pch.h"
 #include "Account.h"
 #include "Credit.h"
-#include "IDatabase.h"
 #include "AccountType.h"
 #include "CurrencyType.h"
 
@@ -28,7 +27,6 @@ namespace Client
 
 		private:
 			bool changedData;
-			IDatabase* databaseConnector;
 
 		public:
 			/**
@@ -37,8 +35,8 @@ namespace Client
 			 * @exception Client::clExceptions::EmptyInitialValues if any parameter is empty string
 			 * @exception Client::clExceptions::InvalidValue if person identification number, card number and pin code has invalid length.
 			 */
-			Client(IDatabase* DatabaseConector, std::string Name, std::string Address, 
-					std::string PhoneNumber, std::string DateOfBirth, std::string PersonIdentificationNumber, 
+			Client(std::string Name, std::string Address, std::string PhoneNumber, 
+					std::string DateOfBirth, std::string PersonIdentificationNumber, 
 					std::string CardNumber, std::string PinCode);
 			
 			/**
@@ -88,6 +86,11 @@ namespace Client
 			*/
 			void WithdrawFromAccount(const std::string accId, const float amount);
 
+			/**
+			* @brief Returns true if some client data is changed
+			*
+			*/
+			bool IsDataChanged() const { return this->changedData; }
 			/**
 			* @brief Get client name
 			*

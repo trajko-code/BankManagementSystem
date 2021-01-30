@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Client\ClientException">
       <UniqueIdentifier>{46855795-f343-49f3-9b3b-ddb572f5c861}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Database\DatabaseException">
+      <UniqueIdentifier>{c4ce4fa9-0f20-4825-bd4f-a3674caa3591}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -108,6 +111,18 @@
     <ClInclude Include="AccountTypeExists.h">
       <Filter>Header Files\Client\ClientException</Filter>
     </ClInclude>
+    <ClInclude Include="ClientManager.h">
+      <Filter>Header Files\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="UnableToConnect.h">
+      <Filter>Header Files\Database\DatabaseException</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientExists.h">
+      <Filter>Header Files\Database\DatabaseException</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientNotExists.h">
+      <Filter>Header Files\Database\DatabaseException</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -132,6 +147,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UUIDGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
