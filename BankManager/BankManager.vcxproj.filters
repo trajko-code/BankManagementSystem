@@ -40,6 +40,9 @@
     <Filter Include="Header Files\Database\DatabaseException">
       <UniqueIdentifier>{c4ce4fa9-0f20-4825-bd4f-a3674caa3591}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Generator">
+      <UniqueIdentifier>{a7f6ee36-e4aa-47c6-9a6a-32849e4e7629}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -121,13 +124,10 @@
       <Filter>Header Files\Database\DatabaseException</Filter>
     </ClInclude>
     <ClInclude Include="IDGenerator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Generator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -150,6 +150,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IDGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

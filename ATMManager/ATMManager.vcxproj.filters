@@ -13,13 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\ATMExceptions">
-      <UniqueIdentifier>{f53214dc-9680-44e8-9662-a691f38bed38}</UniqueIdentifier>
+    <Filter Include="Header Files\ManufacturerAPI">
+      <UniqueIdentifier>{9a42e3c7-5e99-4454-8360-a2be192eab24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ATM">
+      <UniqueIdentifier>{2e7add30-c233-445b-be87-5754885e7487}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ATM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ICreditCardReader.h">
+      <Filter>Header Files\ManufacturerAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="IDeployControl.h">
+      <Filter>Header Files\ManufacturerAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="IDisplay.h">
+      <Filter>Header Files\ManufacturerAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="IKeyboard.h">
+      <Filter>Header Files\ManufacturerAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="ATM.h">
+      <Filter>Header Files\ATM</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyCodes.h">
+      <Filter>Header Files\ATM</Filter>
+    </ClInclude>
+    <ClInclude Include="ATMMessages.h">
+      <Filter>Header Files\ATM</Filter>
+    </ClInclude>
+    <ClInclude Include="ATMState.h">
+      <Filter>Header Files\ATM</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

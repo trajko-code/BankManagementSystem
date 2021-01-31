@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AccountTest.cpp">
+      <Filter>BankManagerTests\AccountTests</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientTest.cpp">
+      <Filter>BankManagerTests\ClientTests</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientManagerTest.cpp">
+      <Filter>BankManagerTests\ClientTests</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorTest.cpp">
+      <Filter>BankManagerTests\GeneratorTests</Filter>
+    </ClCompile>
+    <ClCompile Include="ATMTest.cpp">
+      <Filter>ATMManagerTests\ATMTests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="BankManagerTests">
+      <UniqueIdentifier>{d3c4eab4-8a0c-4bf5-afc9-95f571ea0e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankManagerTests\AccountTests">
+      <UniqueIdentifier>{7e79dd6c-d7a2-4e3f-89d4-f0a619ec69d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankManagerTests\ClientTests">
+      <UniqueIdentifier>{172db1de-2ad3-4582-b7e8-f91e29ba3a5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankManagerTests\CreditTests">
+      <UniqueIdentifier>{ca9b9ef7-287e-452c-b670-a23b1d812440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankManagerTests\GeneratorTests">
+      <UniqueIdentifier>{9ec825b1-e087-4ac8-ad3f-54a447c01950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankManagerTests\TransactionTests">
+      <UniqueIdentifier>{fe49c0c4-c8aa-4978-8e34-15ca6806003d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ATMManagerTests">
+      <UniqueIdentifier>{03ad2a64-2a88-4b16-89c4-687ddf291599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ATMManagerTests\ATMTests">
+      <UniqueIdentifier>{afc6fcf2-babd-4b42-a63f-661d59e867f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

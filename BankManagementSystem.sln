@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankManager", "BankManager\BankManager.vcxproj", "{C17BF5E2-9620-4CDD-AE2D-A0A2E173C25B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankManagerTest", "BankManagerTest\BankManagerTest.vcxproj", "{9899AABD-A02A-4B2F-801D-5C99778CBDBF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{9899AABD-A02A-4B2F-801D-5C99778CBDBF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATMManager", "ATMManager\ATMManager.vcxproj", "{03E31DC2-AECD-435E-8925-DBCF4E5751BC}"
 EndProject

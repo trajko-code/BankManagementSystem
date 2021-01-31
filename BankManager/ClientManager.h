@@ -40,12 +40,12 @@ namespace Client
 			* 
 			* @return True if client authentication is successful
 			*/
-			bool AuthenticateClient(std::string cardNumber, std::string pinCode);
+			bool AuthenticateClient(const std::string cardNumber, const std::string pinCode);
 			/**
 			* @brief Updates client data if changed
 			*
 			*/
-			void UpdateClient();
+			void UpdateClient() const;
 			
 			/**
 			* @brief Delete client account
@@ -154,6 +154,6 @@ namespace Client
 			std::vector<Credit::Credit> GetClientCredits() const { return this->m_client->GetCredits(); }
 		
 		private:
-			void TryToConnect();
+			void TryToConnect() const;
 	};
 }

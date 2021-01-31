@@ -36,7 +36,7 @@ void Client::ClientManager::WithdrawFromClientAccount(const std::string accId, c
 	this->m_client->WithdrawFromAccount(accId, amount);
 }
 
-void Client::ClientManager::TryToConnect()
+void Client::ClientManager::TryToConnect() const
 {
 	int i = 0;
 	while(!this->m_databaseConnector->Connect() && ++i < NUMBER_OF_RECONNECTION) {}
@@ -71,7 +71,7 @@ void Client::ClientManager::LoadClient(std::string cardNumber)
 		throw Database::dbExceptions::ClientNotExists();
 }
 
-bool Client::ClientManager::AuthenticateClient(std::string cardNumber, std::string pinCode)
+bool Client::ClientManager::AuthenticateClient(const std::string cardNumber, const std::string pinCode)
 {
 	if (!this->m_databaseConnector->IsConnected())
 		this->TryToConnect();
@@ -84,7 +84,7 @@ bool Client::ClientManager::AuthenticateClient(std::string cardNumber, std::stri
 		return false;
 }
 
-void Client::ClientManager::UpdateClient()
+void Client::ClientManager::UpdateClient() const
 {
 	if (!this->m_client->IsDataChanged())
 		return;
