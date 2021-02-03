@@ -1,0 +1,44 @@
+BMS (Bank Managment System)
+
+-----Funkcionalnosti:-----
+
+1. Otvaranje računa novom klijentu
+	+1.1. Dodavanje novog klijenta uz proveru da li postoji isti jmbg u bazi
+	+1.2. Iznos na novom računu je 0.0
+	+1.3. Novi klijent mora da ima jedinstveni broj kartice (16 cifara) i pin (4 cifre)
+	+1.4. Ukupan iznos novog klijenta je 0.0
+	+1.5. Svi podaci moraju imati validnu vrednost
+2. Dodavanje novog računa postojećem klijentu
+	+2.1. Jedan klijent može da ima 1 dinarski, 1 devizni i 1 stedni
+	2.2. Algoritam za određivanje kamatne stope za oročne računa na osnovu perioda i iznosa
+3. Uplata novca na račun +
+4. Isplata novca sa računa 
+	+4.1. Novac se može podići samo do visine iznosa na računu ako nema dozvoljeni minus
+	+4.2. Ažurirati trenutnu ukupnu količinu novca klijenta (zbir svih računa)
+	+4.3. Nakon prekoračenja maksimalnog dozvoljenog minusa račun se blokira
+5. Autentifikacija korisnika na osnovu kreditne kartice, id-a korisnika i PIN-a
+	+5.1. Mokovati pozive ka bazi
+6. Kredit
+	6.1. Ne možeš imati više kredita istog tipa
+	6.2. Algoritam za odobravanje kredita na osnovu visine zarade žiranata
+	6.3. Algoritam koji na osnovu tipa, iznosa i vremenskog perioda određuje visinu kamate
+	6.4. Moraš imati tačno 2 žiranta
+	6.5. Nakon kreiranja klase Credit, atribut monthlyPayment se izračunava
+7. Blokiranje računa
+	+7.1. Račun će se automatski blokirati kada se prekorači max dozvoljeni minus
+8. Brisanje računa
+	+8.1. Može se obrisati samo račun na kome se nalazi vrednost 0.0 
+
+Aplikacija za bankomat:
+1. Autentifikacija korisnika na osnovu kredtitne kartice, id-a korisnika i PIN-a
+	1.1. Ukoliko je neuspešna autentifikacija baca se izuzetak i vraća se na početnu stranicu
+2. Uvid u stanje
+3. Zahtev za isplatu
+	3.1. Ne može se uneti iznos koji nije deljiv sa 200
+	3.2. Ukoliko se zahteva isplata većeg iznosa od iznosa sa računa i nije dozvoljen minus baciti izuzetak
+4. Unos iznosa za isplatu
+	//4.1. Dnevni limit za podizanje sa bankomata
+//5. Mogućnost transakcije
+	//5.1. Ukoliko su uneti podaci za uplatu pogrešni baciti izuzetak
+
+*************************************************************************
